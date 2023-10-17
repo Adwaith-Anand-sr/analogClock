@@ -1,0 +1,117 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body, html{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  overflow: hidden;
+}
+.clock-outer-body-circle{
+  width:350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:10px 50px 70px rgba(0,0,0,.25),
+	inset 5px 5px 10px rgba(0,0,0,.5),
+	inset 5px 5px 20px rgba(0,0,0,.2),
+	inset -5px -5px 15px rgba(0,0,0,.75);
+}
+.clock-outer-body-circle::before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: #000000;
+  z-index: 999;
+}
+span{
+  position: absolute;
+  inset: 10px;
+  text-align: center;
+  transform:rotate(30deg);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.clock-outer-body-circle .min{
+  width: 260px;
+  height: 260px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+}
+.clock-outer-body-circle .sec{
+  width: 220px;
+  height: 220px;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  position: absolute;
+}
+.clock-outer-body-circle .hrs{
+  width: 150px;
+  height: 150px;
+  border: 5px solid  rgba(0,0,0,0.1);
+  
+  border-radius: 50%;
+  position: absolute;
+}
+.min-needle{
+  position: absolute;
+  height: 140px;
+  top: 10%;
+  z-index: 90;
+  width: 8px;
+  border: 1.2px solid black;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform-origin: 50% 100%;
+  animation:  4s linear infinite;
+  box-shadow: -2px 0 10px 0.5px rgba(0,0,0,0.5);
+}
+.sec-needle{
+  position: absolute;
+  height: 110px;
+  top: 18.5%;
+  z-index: 90;
+  width: 5px;
+  border: 1.2px solid black;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  transform-origin: 50% 100%;
+  animation:  4s linear infinite;
+  box-shadow: -2px 0 10px 0.5px rgba(0,0,0,0.5);
+}
+.hr-needle{
+  position: absolute;
+  height: 70px;
+  top: 30%;
+  z-index: 85;
+  width: 9px;
+  border: 1.2px solid black;
+  background:#827d7d ;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform-origin: 50% 100%;
+  box-shadow: -2px 0 10px 0.5px rgba(0,0,0,0.5);
+}
+h1{
+  position: fixed;
+  top: 65%;
+  font-size: 10vh;
+}
